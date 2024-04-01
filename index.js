@@ -10,7 +10,8 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'Nitheesh@3533',
-  database: 'student_attendance'
+    database: 'student_attendance',
+ 
 });
 
 // Connect to MySQL database
