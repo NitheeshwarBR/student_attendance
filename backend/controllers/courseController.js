@@ -113,7 +113,7 @@ exports.saveCourseByDetails = async (req, res) => {
       await newQrCode.save();
   
       // Update the qr_code_url with the _id of the newQrCode object
-      newQrCode.qr_code_url = `https://example.com/qrcode/${newQrCode._id}`;
+      newQrCode.qr_code_url = `https://quickchart.io/qr?text=${newQrCode._id}`;
   
       // Save the updated QRCodeSession document with the correct qr_code_url
       await newQrCode.save();
