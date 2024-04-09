@@ -7,6 +7,6 @@ const courseController = require('../controllers/courseController');
 router.get('/courses', courseController.getAllCourses);
 router.post('/courses', courseController.saveCourseByDetails);
 // Route to add a course for a specific faculty
-router.post('/courses/:facultyId', courseController.addCourseForFaculty);
+    router.post('/courses/:facultyId', courseController.addCourseForFaculty);
 router.post('/courses/generate-qrcode/:facultyCourseId',courseController.generateQrCode)
 module.exports = router;
