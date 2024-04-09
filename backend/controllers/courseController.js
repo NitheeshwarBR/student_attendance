@@ -118,7 +118,7 @@ exports.saveCourseByDetails = async (req, res) => {
       await newQrCode.save();
   
       // Respond with success message
-      res.status(201).json({ message: 'QR Code generated successfully', qrCode: newQrCode.qr_code_url });
+      res.status(201).json({ message: 'QR Code generated successfully', qrCode: newQrCode});
     } catch (error) {
       // Handle errors
       res.status(500).json({ message: error.message });
