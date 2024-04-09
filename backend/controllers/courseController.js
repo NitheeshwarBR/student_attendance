@@ -44,7 +44,6 @@ exports.saveCourseByDetails = async (req, res) => {
     }
   };
  
-  
   exports.addCourseForFaculty = async (req, res) => {
     const { facultyId } = req.params;
     const { course_id } = req.body; // Assuming course_id is provided in the request body
@@ -119,7 +118,7 @@ exports.saveCourseByDetails = async (req, res) => {
       await newQrCode.save();
   
       // Respond with success message
-      res.status(201).json({ message: 'QR Code generated successfully', qrCode: newQrCode });
+      res.status(201).json({ message: 'QR Code generated successfully', qrCode: newQrCode.qr_code_url });
     } catch (error) {
       // Handle errors
       res.status(500).json({ message: error.message });
